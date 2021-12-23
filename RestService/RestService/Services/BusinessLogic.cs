@@ -12,7 +12,7 @@ namespace RestService.Services
         /// <returns></returns>
         public int GetSecondHighestInteger(RequestModel model)
         {
-           return model.Data.ToList().OrderByDescending(x => x).Skip(1).First();
+           return model.Data.ToList().Distinct().OrderByDescending(x => x).Skip(1).First();
         }
     }
 }
