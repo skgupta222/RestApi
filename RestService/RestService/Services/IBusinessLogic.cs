@@ -1,5 +1,4 @@
 ﻿using RestService.Models;
-using System.Threading.Tasks;
 
 namespace RestService.Services
 {

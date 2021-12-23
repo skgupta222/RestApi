@@ -4,13 +4,9 @@ using Moq;
 using NUnit.Framework;
 using RestService.Controllers;
 using RestService.Dto;
-using RestService.MapperProfile;
 using RestService.Models;
 using RestService.Services;
-using System;
-using System.Collections.Generic;
 using System.Net;
-using System.Text;
 
 namespace RestService.Test
 {

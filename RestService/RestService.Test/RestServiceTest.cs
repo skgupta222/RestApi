@@ -1,8 +1,6 @@
 ﻿using NUnit.Framework;
 using RestService.Models;
 using RestService.Services;
-using System;
-using System.Collections.Generic;
 
 namespace RestService.Test
 {
