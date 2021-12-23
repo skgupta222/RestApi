@@ -20,15 +20,35 @@ namespace RestService.Controllers
             _mapper = mapper;
         }
 
-        
 
+        /// <summary>
+        /// Take request from request body and returns second heighest number
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("get-second-heighest")]
         public ActionResult<int> GetSecondHeighestInteger([FromBody] RequestDto request)
         {
-            var model = _mapper.Map<RequestModel>(request);
-            var result = _businessLogic.GetSecondHighestInteger(model);            
-            return Ok(result);
+            
+            if(request.numbers.Any())
+            {
+                if(request.numbers.ToList().Count > 1)
+                {
+                    var model = _mapper.Map<RequestModel>(request);
+                    var result = _businessLogic.GetSecondHighestInteger(model);
+                    
+                    return Ok(result);
+                }
+               else
+                {
+                    return BadRequest("Error: Please provide atleast 2 numbers in array");
+                }
+            }
+            else
+            {
+                return BadRequest("Error: Data is not valid");
+            }
             
         }
         

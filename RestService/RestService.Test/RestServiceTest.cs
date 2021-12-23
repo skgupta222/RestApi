@@ -16,7 +16,7 @@ namespace RestService.Test
             _businessLogic = new BusinessLogic();
         }
         [Test]
-        public void Test_Valid_Input_Data()
+        public void Service_ShouldPassWithValidInputData()
         {
             // Arrange
            
